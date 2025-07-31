@@ -1,0 +1,313 @@
+[2025-07-29 11:08:24] glpiphplog.WARNING: Test logger  
+[2025-07-29 12:30:07] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "SignatureCapture" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  front/marketplace.php:43                           Plugin->checkStates()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1114
+  Backtrace :
+  src/Html.php:1114                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1118
+  Backtrace :
+  src/Html.php:1118                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:36:51] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 12:37:02] glpiphplog.CRITICAL:   *** Uncaught Exception Laminas\I18n\Exception\InvalidArgumentException: /var/www/html/glpi/plugins/digitalsignature/locales/pt_BR.mo is not a valid gettext file in /var/www/html/glpi/vendor/laminas/laminas-i18n/src/Translator/Loader/Gettext.php at line 81
+  Backtrace :
+  .../laminas-i18n/src/Translator/Translator.php:738 Laminas\I18n\Translator\Loader\Gettext->load()
+  .../laminas-i18n/src/Translator/Translator.php:612 Laminas\I18n\Translator\Translator->loadMessagesFromFiles()
+  .../laminas-i18n/src/Translator/Translator.php:762 Laminas\I18n\Translator\Translator->loadMessages()
+  front/locale.php:84                                Laminas\I18n\Translator\Translator->getAllMessages()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:38:11] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 13:02:32] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 13:09:57] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:30] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/actorinformation.php:39                       include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:32] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/actorinformation.php at line 40
+  Backtrace :
+  ajax/actorinformation.php:40                       header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:32] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:32] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:37] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/actorinformation.php:39                       include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:38] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/actorinformation.php at line 40
+  Backtrace :
+  ajax/actorinformation.php:40                       header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:38] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:38] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:51] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/comments.php:40                               include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:56] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/comments.php at line 43
+  Backtrace :
+  ajax/comments.php:43                               header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:56] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:41:56] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:00] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/comments.php:40                               include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:03] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/comments.php at line 43
+  Backtrace :
+  ajax/comments.php:43                               header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:03] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:03] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:05] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/comments.php:40                               include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:09] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/comments.php at line 43
+  Backtrace :
+  ajax/comments.php:43                               header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:09] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:09] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/comments.php:44                               Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:13] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/actorinformation.php:39                       include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:14] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/actorinformation.php at line 40
+  Backtrace :
+  ajax/actorinformation.php:40                       header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:14] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:14] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/actorinformation.php:41                       Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  front/marketplace.php:36                           include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  front/marketplace.php:43                           Plugin->checkStates()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1114
+  Backtrace :
+  src/Html.php:1114                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1118
+  Backtrace :
+  src/Html.php:1118                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:15] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:17] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  inc/includes.php:98                                Plugin->init()
+  ajax/common.tabs.php:46                            include()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:17] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/ajax/common.tabs.php at line 52
+  Backtrace :
+  ajax/common.tabs.php:52                            header()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:17] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  ajax/common.tabs.php:53                            Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:17] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  ajax/common.tabs.php:53                            Html::header_nocache()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:42:17] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "digitalsignature" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  src/Plugin.php:279                                 Plugin->checkStates()
+  src/Marketplace/View.php:215                       Plugin->init()
+  src/Marketplace/View.php:124                       Glpi\Marketplace\View::installed()
+  src/CommonGLPI.php:694                             Glpi\Marketplace\View::displayTabContentForItem()
+  ajax/common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  public/index.php:82                                require()
+  
+[2025-07-29 14:45:57] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 23
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 14:46:01] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 23
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 14:46:14] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 23
+  Backtrace :
+  public/index.php:82                                require()
+  

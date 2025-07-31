@@ -1,0 +1,19 @@
+{
+    "name": "joaolucas/digitalsignature",
+    "description": "Adds a digital signature pad to ticket solutions in GLPI.",
+    "type": "glpi-plugin",
+    "authors": [
+        {
+            "name": "Joao Lucas",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GlpiPlugin\\Digitalsignature\\": "src/"
+        }
+    }
+}

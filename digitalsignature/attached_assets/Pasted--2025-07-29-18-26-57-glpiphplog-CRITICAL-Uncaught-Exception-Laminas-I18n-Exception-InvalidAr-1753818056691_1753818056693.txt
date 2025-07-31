@@ -1,0 +1,42 @@
+[2025-07-29 18:26:57] glpiphplog.CRITICAL:   *** Uncaught Exception Laminas\I18n\Exception\InvalidArgumentException: /var/www/html/glpi/plugins/digitalsignature/locales/pt_BR.mo is not a valid gettext file in /var/www/html/glpi/vendor/laminas/laminas-i18n/src/Translator/Loader/Gettext.php at line 81
+  Backtrace :
+  .../laminas-i18n/src/Translator/Translator.php:738 Laminas\I18n\Translator\Loader\Gettext->load()
+  .../laminas-i18n/src/Translator/Translator.php:612 Laminas\I18n\Translator\Translator->loadMessagesFromFiles()
+  .../laminas-i18n/src/Translator/Translator.php:762 Laminas\I18n\Translator\Translator->loadMessages()
+  front/locale.php:84                                Laminas\I18n\Translator\Translator->getAllMessages()
+  public/index.php:82                                require()
+  
+[2025-07-29 18:38:07] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::getLoginUserName() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 50
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 18:42:00] glpiphplog.CRITICAL:   *** Uncaught Exception Laminas\I18n\Exception\InvalidArgumentException: /var/www/html/glpi/plugins/digitalsignature/locales/pt_BR.mo is not a valid gettext file in /var/www/html/glpi/vendor/laminas/laminas-i18n/src/Translator/Loader/Gettext.php at line 81
+  Backtrace :
+  .../laminas-i18n/src/Translator/Translator.php:738 Laminas\I18n\Translator\Loader\Gettext->load()
+  .../laminas-i18n/src/Translator/Translator.php:612 Laminas\I18n\Translator\Translator->loadMessagesFromFiles()
+  .../laminas-i18n/src/Translator/Translator.php:762 Laminas\I18n\Translator\Translator->loadMessages()
+  front/locale.php:84                                Laminas\I18n\Translator\Translator->getAllMessages()
+  public/index.php:82                                require()
+  
+[2025-07-29 18:42:28] glpiphplog.WARNING:   *** PHP User Warning (512): Falha na conexão. Se você usa um proxy, por favor configure-o. (SSL connection timeout) in /var/www/html/glpi/src/Toolbox.php at line 1567
+  Backtrace :
+  src/Toolbox.php:1567                               trigger_error()
+  src/GLPINetwork.php:322                            Toolbox::callCurl()
+  src/Marketplace/View.php:150                       GLPINetwork::isServicesAvailable()
+  src/Marketplace/View.php:219                       Glpi\Marketplace\View::checkRegistrationStatus()
+  src/Marketplace/View.php:124                       Glpi\Marketplace\View::installed()
+  src/CommonGLPI.php:694                             Glpi\Marketplace\View::displayTabContentForItem()
+  ajax/common.tabs.php:120                           CommonGLPI::displayStandardTab()
+  public/index.php:82                                require()
+  
+[2025-07-29 18:44:45] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::getLoginUserName() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 50
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 19:02:23] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::getLoginUserName() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 50
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 19:32:58] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::getLoginUserName() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 50
+  Backtrace :
+  public/index.php:82                                require()

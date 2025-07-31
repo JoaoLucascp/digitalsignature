@@ -1,0 +1,176 @@
+<details><summary>Instruções de instalação e configuração</summary><pre>GLPI 10.0.18 ( => /var/www/html/glpi)
+Installation mode: TARBALL
+Current language:pt_BR
+
+</pre></details><details><summary>Server</summary><pre> 
+Operating system: Linux newdesk-server 6.8.0-64-generic #​67-Ubuntu SMP PREEMPT_DYNAMIC Sun Jun 15 20:23:31 UTC 2025 x86_64
+PHP 8.3.6 apache2handler (Core, FFI, PDO, Phar, Reflection, SPL, SimpleXML, Zend OPcache, apache2handler, apcu, bcmath, bz2,
+	calendar, ctype, curl, date, dom, exif, fileinfo, filter, ftp, gd, gettext, hash, iconv, intl, json, ldap, libxml, mbstring,
+	mysqli, mysqlnd, openssl, pcre, pdo_mysql, posix, random, readline, session, shmop, sockets, sodium, standard, sysvmsg, sysvsem,
+	sysvshm, tokenizer, xml, xmlreader, xmlwriter, xsl, zip, zlib)
+Setup: max_execution_time="30" memory_limit="128M" post_max_size="8M" safe_mode="" session.save_handler="files"
+	upload_max_filesize="2M" disable_functions="" 
+Software: Apache/2.4.58 (Ubuntu) (Apache/2.4.58 (Ubuntu) Server at 10.10.31.172 Port 80
+)
+	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0
+Server Software: Ubuntu 24.04
+	Server Version: 10.11.13-MariaDB-0ubuntu0.24.04.1
+	Server SQL Mode: STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+	Parameters: glpiuser@localhost/glpi
+	Host info: Localhost via UNIX socket
+	
+PHP version (8.3.6) is supported.
+Sessions configuration is OK.
+Allocated memory is sufficient.
+mysqli extension is installed.
+Following extensions are installed: dom, fileinfo, filter, libxml, json, simplexml, xmlreader, xmlwriter.
+curl extension is installed.
+gd extension is installed.
+intl extension is installed.
+zlib extension is installed.
+The constant SODIUM_CRYPTO_AEAD_XCHACHA20POLY1305_IETF_NPUBBYTES is present.
+Database engine version (10.11.13) is supported.
+No files from previous GLPI version detected.
+The log file has been created successfully.
+Write access to /var/www/html/glpi/files/_cache has been validated.
+Write access to /var/www/html/glpi/files/_cron has been validated.
+Write access to /var/www/html/glpi/files has been validated.
+Write access to /var/www/html/glpi/files/_dumps has been validated.
+Write access to /var/www/html/glpi/files/_graphs has been validated.
+Write access to /var/www/html/glpi/files/_lock has been validated.
+Write access to /var/www/html/glpi/files/_pictures has been validated.
+Write access to /var/www/html/glpi/files/_plugins has been validated.
+Write access to /var/www/html/glpi/files/_rss has been validated.
+Write access to /var/www/html/glpi/files/_sessions has been validated.
+Write access to /var/www/html/glpi/files/_tmp has been validated.
+Write access to /var/www/html/glpi/files/_uploads has been validated.
+
+Web server root directory configuration seems safe.
+PHP directive "session.cookie_httponly" should be set to "on" to prevent client-side script to access cookie values.
+OS and PHP are relying on 64 bits integers.
+exif extension is installed.
+ldap extension is installed.
+openssl extension is installed.
+Following extensions are installed: bz2, Phar, zip.
+Zend OPcache extension is installed.
+Following extensions are installed: ctype, iconv, mbstring, sodium.
+Write access to /var/www/html/glpi/marketplace has been validated.
+Access to timezone database (mysql) is not allowed.
+
+</pre></details><details><summary>GLPI constants</summary><pre> 
+GLPI_ROOT: "/var/www/html/glpi"
+GLPI_CONFIG_DIR: "/var/www/html/glpi/config"
+GLPI_VAR_DIR: "/var/www/html/glpi/files"
+GLPI_MARKETPLACE_DIR: "/var/www/html/glpi/marketplace"
+GLPI_USE_CSRF_CHECK: "1"
+GLPI_CSRF_EXPIRES: "7200"
+GLPI_CSRF_MAX_TOKENS: "100"
+GLPI_USE_IDOR_CHECK: "1"
+GLPI_IDOR_EXPIRES: "7200"
+GLPI_ALLOW_IFRAME_IN_RICH_TEXT: false
+GLPI_SERVERSIDE_URL_ALLOWLIST: ["#^http://[^@:]+(:80)?(/.*)?$#","#^https://[^@:]+(:443)?(/.*)?$#","#^feed://[^@:]+(/.*)?$#"]
+GLPI_DISALLOWED_UPLOADS_PATTERN: "/\\.(php\\d*|phar)$/i"
+GLPI_TELEMETRY_URI: "https://telemetry.glpi-project.org"
+GLPI_INSTALL_MODE: "TARBALL"
+GLPI_NETWORK_MAIL: "glpi@teclib.com"
+GLPI_NETWORK_SERVICES: "https://services.glpi-network.com"
+GLPI_MARKETPLACE_ALLOW_OVERRIDE: true
+GLPI_MARKETPLACE_MANUAL_DOWNLOADS: true
+GLPI_USER_AGENT_EXTRA_COMMENTS: ""
+GLPI_DISABLE_ONLY_FULL_GROUP_BY_SQL_MODE: "1"
+GLPI_AJAX_DASHBOARD: "1"
+GLPI_CALDAV_IMPORT_STATE: 0
+GLPI_DEMO_MODE: "0"
+GLPI_CENTRAL_WARNINGS: "1"
+GLPI_TEXT_MAXSIZE: "4000"
+GLPI_DOC_DIR: "/var/www/html/glpi/files"
+GLPI_CACHE_DIR: "/var/www/html/glpi/files/_cache"
+GLPI_CRON_DIR: "/var/www/html/glpi/files/_cron"
+GLPI_DUMP_DIR: "/var/www/html/glpi/files/_dumps"
+GLPI_GRAPH_DIR: "/var/www/html/glpi/files/_graphs"
+GLPI_LOCAL_I18N_DIR: "/var/www/html/glpi/files/_locales"
+GLPI_LOCK_DIR: "/var/www/html/glpi/files/_lock"
+GLPI_LOG_DIR: "/var/www/html/glpi/files/_log"
+GLPI_PICTURE_DIR: "/var/www/html/glpi/files/_pictures"
+GLPI_PLUGIN_DOC_DIR: "/var/www/html/glpi/files/_plugins"
+GLPI_RSS_DIR: "/var/www/html/glpi/files/_rss"
+GLPI_SESSION_DIR: "/var/www/html/glpi/files/_sessions"
+GLPI_TMP_DIR: "/var/www/html/glpi/files/_tmp"
+GLPI_UPLOAD_DIR: "/var/www/html/glpi/files/_uploads"
+GLPI_INVENTORY_DIR: "/var/www/html/glpi/files/_inventories"
+GLPI_NETWORK_REGISTRATION_API_URL: "https://services.glpi-network.com/api/registration/"
+GLPI_MARKETPLACE_PLUGINS_API_URI: "https://services.glpi-network.com/api/marketplace/"
+GLPI_I18N_DIR: "/var/www/html/glpi/locales"
+GLPI_VERSION: "10.0.18"
+GLPI_DEBUG: 2
+GLPI_SCHEMA_VERSION: "10.0.18"
+GLPI_MARKETPLACE_PRERELEASES: false
+GLPI_MIN_PHP: "7.4.0"
+GLPI_MAX_PHP: "8.4.0"
+GLPI_YEAR: "2025"
+
+</pre></details><details><summary>Libraries</summary><pre> 
+htmlawed/htmlawed version 1.2.14 in (/var/www/html/glpi/vendor/htmlawed/htmlawed)
+phpmailer/phpmailer version 6.8.0 in (/var/www/html/glpi/vendor/phpmailer/phpmailer/src)
+simplepie/simplepie version 1.5.8 in (/var/www/html/glpi/vendor/simplepie/simplepie/library)
+tecnickcom/tcpdf version 6.8.0 in (/var/www/html/glpi/vendor/tecnickcom/tcpdf)
+michelf/php-markdown in (/var/www/html/glpi/vendor/michelf/php-markdown/Michelf)
+true/punycode in (/var/www/html/glpi/vendor/true/punycode/src)
+iamcal/lib_autolink in (/var/www/html/glpi/vendor/iamcal/lib_autolink)
+sabre/dav in (/var/www/html/glpi/vendor/sabre/dav/lib/DAV)
+sabre/http in (/var/www/html/glpi/vendor/sabre/http/lib)
+sabre/uri in (/var/www/html/glpi/vendor/sabre/uri/lib)
+sabre/vobject in (/var/www/html/glpi/vendor/sabre/vobject/lib)
+laminas/laminas-i18n in (/var/www/html/glpi/vendor/laminas/laminas-i18n/src)
+laminas/laminas-servicemanager in (/var/www/html/glpi/vendor/laminas/laminas-servicemanager/src)
+monolog/monolog in (/var/www/html/glpi/vendor/monolog/monolog/src/Monolog)
+sebastian/diff in (/var/www/html/glpi/vendor/sebastian/diff/src)
+donatj/phpuseragentparser in (/var/www/html/glpi/vendor/donatj/phpuseragentparser/src/UserAgent)
+elvanto/litemoji in (/var/www/html/glpi/vendor/elvanto/litemoji/src)
+symfony/console in (/var/www/html/glpi/vendor/symfony/console)
+scssphp/scssphp in (/var/www/html/glpi/vendor/scssphp/scssphp/src)
+laminas/laminas-mail in (/var/www/html/glpi/vendor/laminas/laminas-mail/src/Protocol)
+laminas/laminas-mime in (/var/www/html/glpi/vendor/laminas/laminas-mime/src)
+rlanvin/php-rrule in (/var/www/html/glpi/vendor/rlanvin/php-rrule/src)
+ramsey/uuid in (/var/www/html/glpi/vendor/ramsey/uuid/src)
+psr/log in (/var/www/html/glpi/vendor/psr/log/Psr/Log)
+psr/simple-cache in (/var/www/html/glpi/vendor/psr/simple-cache/src)
+psr/cache in (/var/www/html/glpi/vendor/psr/cache/src)
+league/csv in (/var/www/html/glpi/vendor/league/csv/src)
+mexitek/phpcolors in (/var/www/html/glpi/vendor/mexitek/phpcolors/src/Mexitek/PHPColors)
+guzzlehttp/guzzle in (/var/www/html/glpi/vendor/guzzlehttp/guzzle/src)
+guzzlehttp/psr7 in (/var/www/html/glpi/vendor/guzzlehttp/psr7/src)
+glpi-project/inventory_format in (/var/www/html/glpi/vendor/glpi-project/inventory_format/lib/php)
+wapmorgan/unified-archive in (/var/www/html/glpi/vendor/wapmorgan/unified-archive/src)
+paragonie/sodium_compat in (/var/www/html/glpi/vendor/paragonie/sodium_compat/src)
+symfony/cache in (/var/www/html/glpi/vendor/symfony/cache)
+html2text/html2text in (/var/www/html/glpi/vendor/html2text/html2text/src)
+symfony/css-selector in (/var/www/html/glpi/vendor/symfony/css-selector)
+symfony/dom-crawler in (/var/www/html/glpi/vendor/symfony/dom-crawler)
+twig/twig in (/var/www/html/glpi/vendor/twig/twig/src)
+twig/string-extra in (/var/www/html/glpi/vendor/twig/string-extra)
+symfony/polyfill-ctype not found
+symfony/polyfill-iconv not found
+symfony/polyfill-mbstring not found
+symfony/polyfill-php80 not found
+symfony/polyfill-php81 not found
+symfony/polyfill-php82 in (/var/www/html/glpi/vendor/symfony/polyfill-php82)
+league/oauth2-client in (/var/www/html/glpi/vendor/league/oauth2-client/src/Provider)
+league/oauth2-google in (/var/www/html/glpi/vendor/league/oauth2-google/src/Provider)
+thenetworg/oauth2-azure in (/var/www/html/glpi/vendor/thenetworg/oauth2-azure/src/Provider)
+
+</pre></details><details><summary>SQL replicas</summary><pre> 
+Not active
+
+</pre></details><details><summary>Notifications</summary><pre> 
+Way of sending emails: PHP
+
+</pre></details><details><summary>Plugins list</summary><pre> 
+	SignatureCapture     Name: Assinatura Digital             Version: 2.0.0      State: Not installed                           
+		Install Method: Manual
+	fields               Name: Campos adicionais              Version: 1.21.22    State: Enabled                                 
+		Install Method: Marketplace
+	formcreator          Name: Form Creator                   Version: 2.13.10    State: Enabled                                 
+		Install Method: Marketplace
+
+</pre></details>

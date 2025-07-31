@@ -1,0 +1,217 @@
+/**
+ * Digital Signature Plugin CSS
+ * Styles for signature capture interface integrated with GLPI
+ */
+
+/* Signature container styling */
+#signature-container {
+    margin: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Signature pad wrapper with professional styling */
+#signature-pad-wrapper {
+    border: 3px solid #007cba;
+    border-radius: 12px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 124, 186, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+#signature-pad-wrapper:hover {
+    border-color: #0056b3;
+    box-shadow: 0 6px 20px rgba(0, 124, 186, 0.15);
+}
+
+/* Canvas styling for signature capture */
+#signature-canvas {
+    display: block;
+    cursor: crosshair;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    background: #ffffff;
+}
+
+#signature-canvas:active {
+    cursor: none;
+}
+
+/* Placeholder text styling */
+#signature-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #999;
+    pointer-events: none;
+    font-size: 16px;
+    text-align: center;
+    font-style: italic;
+    user-select: none;
+    opacity: 0.7;
+}
+
+/* Help text styling */
+.signature-help {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 8px 12px;
+    background: #f8f9fa;
+    border-left: 4px solid #007cba;
+    border-radius: 4px;
+}
+
+.signature-help i {
+    margin-right: 8px;
+    color: #007cba;
+}
+
+/* Button styling consistent with GLPI */
+#clear-signature {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#clear-signature:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+#clear-signature:active {
+    transform: translateY(0);
+}
+
+#clear-signature i {
+    font-size: 12px;
+}
+
+/* Status indicator styling */
+#signature-status {
+    margin-left: 15px;
+    color: #28a745;
+    font-weight: 500;
+    font-size: 14px;
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+#signature-status i {
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    #signature-pad-wrapper {
+        max-width: 100%;
+        height: 150px;
+    }
+    
+    #signature-placeholder {
+        font-size: 14px;
+    }
+    
+    .signature-help {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+    
+    #clear-signature {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    #signature-pad-wrapper {
+        height: 120px;
+    }
+    
+    #signature-placeholder {
+        font-size: 12px;
+    }
+    
+    #clear-signature {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
+    #signature-status {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Loading state for signature save */
+.signature-saving #clear-signature {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.signature-saving #signature-canvas {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Success state styling */
+.signature-saved #signature-pad-wrapper {
+    border-color: #28a745;
+    background: #f8fff9;
+}
+
+.signature-saved #signature-placeholder {
+    color: #28a745;
+}
+
+/* Error state styling */
+.signature-error #signature-pad-wrapper {
+    border-color: #dc3545;
+    background: #fff8f8;
+}
+
+.signature-error #signature-placeholder {
+    color: #dc3545;
+}
+
+/* Integration with GLPI table styling */
+tr.tab_bg_1 th {
+    vertical-align: top;
+    padding-top: 20px;
+}
+
+tr.tab_bg_1 td {
+    padding: 15px 10px;
+}
+
+/* Ensure signature container fits well in GLPI forms */
+.tab_cadre_fixe #signature-container {
+    width: 100%;
+    max-width: none;
+}
+
+/* Print styling - hide signature interface when printing */
+@media print {
+    #signature-container,
+    #clear-signature,
+    .signature-help {
+        display: none !important;
+    }
+}

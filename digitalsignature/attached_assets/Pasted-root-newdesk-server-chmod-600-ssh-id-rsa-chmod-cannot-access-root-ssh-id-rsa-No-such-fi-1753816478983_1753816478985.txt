@@ -1,0 +1,287 @@
+root@newdesk-server:~# chmod 600 ~/.ssh/id_rsa
+chmod: cannot access '/root/.ssh/id_rsa': No such file or directory
+root@newdesk-server:~# ls -ld ~/.ssh
+drwx------ 2 root root 4096 jul 29 18:58 /root/.ssh
+root@newdesk-server:~# ls -l ~/.ssh
+total 4
+-rw------- 1 root root   0 jul 14 20:00 authorized_keys
+-rw-r--r-- 1 root root 142 jul 29 18:58 known_hosts
+root@newdesk-server:~# cat ~/.ssh/authorized_keys
+root@newdesk-server:~# tail -f /var/log/auth.log
+2025-07-29T18:59:00.343072+00:00 newdesk-server sshd[764060]: pam_unix(sshd:auth): check pass; user unknown
+2025-07-29T18:59:03.023947+00:00 newdesk-server sshd[764060]: Failed password for invalid user user from 10.10.31.172 port 37288 ssh2
+2025-07-29T18:59:14.578903+00:00 newdesk-server sshd[764060]: pam_unix(sshd:auth): check pass; user unknown
+2025-07-29T18:59:16.512754+00:00 newdesk-server sshd[764060]: Failed password for invalid user user from 10.10.31.172 port 37288 ssh2
+2025-07-29T18:59:17.679866+00:00 newdesk-server sshd[764060]: Connection closed by invalid user user 10.10.31.172 port 37288 [preauth]
+2025-07-29T18:59:17.698765+00:00 newdesk-server sshd[764060]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=10.10.31.172
+2025-07-29T19:05:01.954971+00:00 newdesk-server CRON[767138]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-07-29T19:05:02.213630+00:00 newdesk-server CRON[767138]: pam_unix(cron:session): session closed for user root
+2025-07-29T19:09:02.161196+00:00 newdesk-server CRON[768799]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2025-07-29T19:09:02.390885+00:00 newdesk-server CRON[768799]: pam_unix(cron:session): session closed for user root
+^C
+root@newdesk-server:~# ^C
+root@newdesk-server:~# ssh -vvv new@10.10.31.172
+OpenSSH_9.6p1 Ubuntu-3ubuntu13.13, OpenSSL 3.0.13 30 Jan 2024
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug2: resolve_canonicalize: hostname 10.10.31.172 is address
+debug3: expanded UserKnownHostsFile '~/.ssh/known_hosts' -> '/root/.ssh/known_hosts'
+debug3: expanded UserKnownHostsFile '~/.ssh/known_hosts2' -> '/root/.ssh/known_hosts2'
+debug3: channel_clear_timeouts: clearing
+debug3: ssh_connect_direct: entering
+debug1: Connecting to 10.10.31.172 [10.10.31.172] port 22.
+debug3: set_sock_tos: set socket 3 IP_TOS 0x10
+debug1: Connection established.
+debug1: identity file /root/.ssh/id_rsa type -1
+debug1: identity file /root/.ssh/id_rsa-cert type -1
+debug1: identity file /root/.ssh/id_ecdsa type -1
+debug1: identity file /root/.ssh/id_ecdsa-cert type -1
+debug1: identity file /root/.ssh/id_ecdsa_sk type -1
+debug1: identity file /root/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /root/.ssh/id_ed25519 type -1
+debug1: identity file /root/.ssh/id_ed25519-cert type -1
+debug1: identity file /root/.ssh/id_ed25519_sk type -1
+debug1: identity file /root/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /root/.ssh/id_xmss type -1
+debug1: identity file /root/.ssh/id_xmss-cert type -1
+debug1: identity file /root/.ssh/id_dsa type -1
+debug1: identity file /root/.ssh/id_dsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.13
+debug1: Remote protocol version 2.0, remote software version OpenSSH_9.6p1 Ubuntu-3ubuntu13.13
+debug1: compat_banner: match: OpenSSH_9.6p1 Ubuntu-3ubuntu13.13 pat OpenSSH* compat 0x04000000
+debug2: fd 3 setting O_NONBLOCK
+debug1: Authenticating to 10.10.31.172:22 as 'new'
+debug3: record_hostkey: found key type ED25519 in file /root/.ssh/known_hosts:1
+debug3: load_hostkeys_file: loaded 1 keys from 10.10.31.172
+debug1: load_hostkeys: fopen /root/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug3: order_hostkeyalgs: have matching best-preference key type ssh-ed25519-cert-v01@openssh.com, using HostkeyAlgorithms verbatim
+debug3: send packet: type 20
+debug1: SSH2_MSG_KEXINIT sent
+debug3: receive packet: type 20
+debug1: SSH2_MSG_KEXINIT received
+debug2: local client KEXINIT proposal
+debug2: KEX algorithms: sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com
+debug2: host key algorithms: ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256
+debug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+debug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+debug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: compression ctos: none,zlib@openssh.com,zlib
+debug2: compression stoc: none,zlib@openssh.com,zlib
+debug2: languages ctos:
+debug2: languages stoc:
+debug2: first_kex_follows 0
+debug2: reserved 0
+debug2: peer server KEXINIT proposal
+debug2: KEX algorithms: sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,ext-info-s,kex-strict-s-v00@openssh.com
+debug2: host key algorithms: rsa-sha2-512,rsa-sha2-256,ecdsa-sha2-nistp256,ssh-ed25519
+debug2: ciphers ctos: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+debug2: ciphers stoc: chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com
+debug2: MACs ctos: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: MACs stoc: umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: compression ctos: none,zlib@openssh.com
+debug2: compression stoc: none,zlib@openssh.com
+debug2: languages ctos:
+debug2: languages stoc:
+debug2: first_kex_follows 0
+debug2: reserved 0
+debug3: kex_choose_conf: will use strict KEX ordering
+debug1: kex: algorithm: sntrup761x25519-sha512@openssh.com
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug3: send packet: type 30
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug3: receive packet: type 31
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:3TJ9Ykhinm5Uuykq0j84ni7PYs/0sIFcfDPvEcor60U
+debug3: record_hostkey: found key type ED25519 in file /root/.ssh/known_hosts:1
+debug3: load_hostkeys_file: loaded 1 keys from 10.10.31.172
+debug1: load_hostkeys: fopen /root/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host '10.10.31.172' is known and matches the ED25519 host key.
+debug1: Found key in /root/.ssh/known_hosts:1
+debug3: send packet: type 21
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug2: ssh_set_newkeys: mode 1
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: Sending SSH2_MSG_EXT_INFO
+debug3: send packet: type 7
+debug1: expecting SSH2_MSG_NEWKEYS
+debug3: receive packet: type 21
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug2: ssh_set_newkeys: mode 0
+debug1: rekey in after 134217728 blocks
+debug3: send packet: type 5
+debug3: receive packet: type 7
+debug1: SSH2_MSG_EXT_INFO received
+debug3: kex_input_ext_info: extension server-sig-algs
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256>
+debug3: kex_input_ext_info: extension publickey-hostbound@openssh.com
+debug1: kex_ext_info_check_ver: publickey-hostbound@openssh.com=<0>
+debug3: kex_input_ext_info: extension ping@openssh.com
+debug1: kex_ext_info_check_ver: ping@openssh.com=<0>
+debug3: receive packet: type 6
+debug2: service_accept: ssh-userauth
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug3: send packet: type 50
+debug3: receive packet: type 7
+debug1: SSH2_MSG_EXT_INFO received
+debug3: kex_input_ext_info: extension server-sig-algs
+debug1: kex_ext_info_client_parse: server-sig-algs=<ssh-ed25519,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,rsa-sha2-512,rsa-sha2-256>
+debug3: receive packet: type 51
+debug1: Authentications that can continue: publickey,password
+debug3: start over, passed a different list publickey,password
+debug3: preferred gssapi-with-mic,publickey,keyboard-interactive,password
+debug3: authmethod_lookup publickey
+debug3: remaining preferred: keyboard-interactive,password
+debug3: authmethod_is_enabled publickey
+debug1: Next authentication method: publickey
+debug1: Will attempt key: /root/.ssh/id_rsa
+debug1: Will attempt key: /root/.ssh/id_ecdsa
+debug1: Will attempt key: /root/.ssh/id_ecdsa_sk
+debug1: Will attempt key: /root/.ssh/id_ed25519
+debug1: Will attempt key: /root/.ssh/id_ed25519_sk
+debug1: Will attempt key: /root/.ssh/id_xmss
+debug1: Will attempt key: /root/.ssh/id_dsa
+debug2: pubkey_prepare: done
+debug1: Trying private key: /root/.ssh/id_rsa
+debug3: no such identity: /root/.ssh/id_rsa: No such file or directory
+debug1: Trying private key: /root/.ssh/id_ecdsa
+debug3: no such identity: /root/.ssh/id_ecdsa: No such file or directory
+debug1: Trying private key: /root/.ssh/id_ecdsa_sk
+debug3: no such identity: /root/.ssh/id_ecdsa_sk: No such file or directory
+debug1: Trying private key: /root/.ssh/id_ed25519
+debug3: no such identity: /root/.ssh/id_ed25519: No such file or directory
+debug1: Trying private key: /root/.ssh/id_ed25519_sk
+debug3: no such identity: /root/.ssh/id_ed25519_sk: No such file or directory
+debug1: Trying private key: /root/.ssh/id_xmss
+debug3: no such identity: /root/.ssh/id_xmss: No such file or directory
+debug1: Trying private key: /root/.ssh/id_dsa
+debug3: no such identity: /root/.ssh/id_dsa: No such file or directory
+debug2: we did not send a packet, disable method
+debug3: authmethod_lookup password
+debug3: remaining preferred: ,password
+debug3: authmethod_is_enabled password
+debug1: Next authentication method: password
+new@10.10.31.172's password:
+debug3: send packet: type 50
+debug2: we sent a password packet, wait for reply
+debug3: receive packet: type 52
+Authenticated to 10.10.31.172 ([10.10.31.172]:22) using "password".
+debug1: channel 0: new session [client-session] (inactive timeout: 0)
+debug3: ssh_session2_open: channel_new: 0
+debug2: channel 0: send open
+debug3: send packet: type 90
+debug1: Requesting no-more-sessions@openssh.com
+debug3: send packet: type 80
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug3: client_repledge: enter
+debug3: receive packet: type 80
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug3: client_input_hostkeys: received RSA key SHA256:BEfV0mRWts/dhlaL3wz8l+3i2iAY/rtHYHWGiN/xQJI
+debug3: client_input_hostkeys: received ECDSA key SHA256:4n0OCQIJ13qnry5/6bNLrQVnhV3RjLdGpOwFQqufY9M
+debug3: client_input_hostkeys: received ED25519 key SHA256:3TJ9Ykhinm5Uuykq0j84ni7PYs/0sIFcfDPvEcor60U
+debug1: client_input_hostkeys: searching /root/.ssh/known_hosts for 10.10.31.172 / (none)
+debug3: hostkeys_foreach: reading file "/root/.ssh/known_hosts"
+debug3: hostkeys_find: found ssh-ed25519 key at /root/.ssh/known_hosts:1
+debug1: client_input_hostkeys: searching /root/.ssh/known_hosts2 for 10.10.31.172 / (none)
+debug1: client_input_hostkeys: hostkeys file /root/.ssh/known_hosts2 does not exist
+debug3: client_input_hostkeys: 3 server keys: 2 new, 18446744073709551615 retained, 2 incomplete match. 0 to remove
+debug3: client_input_hostkeys: asking server to prove ownership for 2 keys
+debug3: send packet: type 80
+debug3: receive packet: type 91
+debug2: channel_input_open_confirmation: channel 0: callback start
+debug2: fd 3 setting TCP_NODELAY
+debug3: set_sock_tos: set socket 3 IP_TOS 0x10
+debug2: client_session2_setup: id 0
+debug2: channel 0: request pty-req confirm 1
+debug3: send packet: type 98
+debug1: Sending environment.
+debug3: Ignored env SHELL
+debug3: Ignored env SUDO_GID
+debug3: Ignored env SUDO_COMMAND
+debug3: Ignored env SUDO_USER
+debug3: Ignored env PWD
+debug3: Ignored env LOGNAME
+debug3: Ignored env HOME
+debug1: channel 0: setting env LANG = "pt_PT.UTF-8"
+debug2: channel 0: request env confirm 0
+debug3: send packet: type 98
+debug3: Ignored env LS_COLORS
+debug3: Ignored env LESSCLOSE
+debug3: Ignored env TERM
+debug3: Ignored env LESSOPEN
+debug3: Ignored env USER
+debug3: Ignored env DISPLAY
+debug3: Ignored env SHLVL
+debug3: Ignored env XDG_DATA_DIRS
+debug3: Ignored env PATH
+debug3: Ignored env SUDO_UID
+debug3: Ignored env MAIL
+debug3: Ignored env _
+debug2: channel 0: request shell confirm 1
+debug3: send packet: type 98
+debug3: client_repledge: enter
+debug2: channel_input_open_confirmation: channel 0: callback done
+debug2: channel 0: open confirm rwindow 0 rmax 32768
+debug3: receive packet: type 81
+debug3: client_global_hostkeys_prove_confirm: verify RSA key 0 using sigalg rsa-sha2-512
+debug3: client_global_hostkeys_prove_confirm: verify ECDSA key 1 using sigalg ecdsa-sha2-nistp256
+Learned new hostkey: RSA SHA256:BEfV0mRWts/dhlaL3wz8l+3i2iAY/rtHYHWGiN/xQJI
+Learned new hostkey: ECDSA SHA256:4n0OCQIJ13qnry5/6bNLrQVnhV3RjLdGpOwFQqufY9M
+debug3: hostkeys_foreach: reading file "/root/.ssh/known_hosts"
+debug3: host_delete: ED25519 key already at /root/.ssh/known_hosts:1
+Adding new key for 10.10.31.172 to /root/.ssh/known_hosts: ssh-rsa SHA256:BEfV0mRWts/dhlaL3wz8l+3i2iAY/rtHYHWGiN/xQJI
+Adding new key for 10.10.31.172 to /root/.ssh/known_hosts: ecdsa-sha2-nistp256 SHA256:4n0OCQIJ13qnry5/6bNLrQVnhV3RjLdGpOwFQqufY9M
+debug1: update_known_hosts: known hosts file /root/.ssh/known_hosts2 does not exist
+debug3: client_repledge: enter
+debug1: pledge: fork
+debug3: receive packet: type 99
+debug2: channel_input_status_confirm: type 99 id 0
+debug2: PTY allocation request accepted on channel 0
+debug2: channel 0: rcvd adjust 2097152
+debug3: receive packet: type 99
+debug2: channel_input_status_confirm: type 99 id 0
+debug2: shell request accepted on channel 0
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-64-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of ter 29 jul 2025 19:13:33 UTC
+
+  System load:            0.43
+  Usage of /:             23.0% of 27.39GB
+  Memory usage:           29%
+  Swap usage:             0%
+  Processes:              238
+  Users logged in:        1
+  IPv4 address for ens33: 10.10.31.172
+  IPv6 address for ens33: 2804:1b3:9900:ce95:20c:29ff:fe6c:a605
+  IPv6 address for ens33: 2804:40a8:292:5c00:20c:29ff:fe6c:a605
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Manutenção de Segurança Expandida para Applications não está ativa.
+
+0 as atualizações podem ser aplicadas imediatamente.
+
+Ativar ESM Apps para poder receber possiveis futuras atualizações de segurança.
+Consulte https://ubuntu.com/esm ou execute: sudo pro status
+
+
+*** É necessário reiniciar o sistema ***
+Last login: Tue Jul 29 15:13:14 2025 from 10.10.31.115
+new@newdesk-server:~$

@@ -1,0 +1,37 @@
+{
+    "name": "glpiplugin/digitalsignature",
+    "description": "Plugin de assinatura digital para GLPI - permite capturar assinaturas em formulários de solução",
+    "type": "glpi-plugin",
+    "license": "GPL-2.0+",
+    "homepage": "https://github.com/newtel/digitalsignature",
+    "authors": [
+        {
+            "name": "Joao Lucas",
+            "email": "joao@newtel.com.br",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "glpi",
+        "plugin",
+        "signature",
+        "digital signature",
+        "assinatura digital"
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "glpi-project/coding-standard": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GlpiPlugin\\Digitalsignature\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "extra": {
+        "installer-name": "digitalsignature"
+    }
+}

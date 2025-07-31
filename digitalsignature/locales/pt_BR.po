@@ -1,0 +1,101 @@
+# Portuguese (Brazil) translation for Digital Signature Plugin
+# Copyright (C) 2025 Joao Lucas - Newtel Soluções
+# This file is distributed under the same license as the plugin package.
+#
+# Translators:
+# Joao Lucas <joao@newtel.com.br>, 2025
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GLPI Plugin - Digital Signature\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-29 18:00+0000\n"
+"PO-Revision-Date: 2025-07-29 18:00+0000\n"
+"Last-Translator: Joao Lucas <joao@newtel.com.br>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Plugin name and descriptions
+msgid "Digital Signature"
+msgstr "Assinatura Digital"
+
+msgid "Digital signature capture for ticket solutions"
+msgstr "Captura de assinatura digital para soluções de chamados"
+
+# User interface
+msgid "Click and draw your signature here..."
+msgstr "Clique e desenhe sua assinatura aqui..."
+
+msgid "Clear"
+msgstr "Limpar"
+
+msgid "Signature captured"
+msgstr "Assinatura capturada"
+
+msgid "To complete this solution, the client must provide their digital signature."
+msgstr "Para finalizar esta solução, o cliente deve fornecer sua assinatura digital."
+
+msgid "Please sign below to confirm the solution"
+msgstr "Por favor, assine abaixo para confirmar a solução"
+
+# Error messages
+msgid "Invalid security token"
+msgstr "Token de segurança inválido"
+
+msgid "User not authenticated"
+msgstr "Usuário não autenticado"
+
+msgid "Ticket ID is required"
+msgstr "ID do chamado é obrigatório"
+
+msgid "Signature data is required"
+msgstr "Dados de assinatura são obrigatórios"
+
+msgid "Invalid signature format"
+msgstr "Formato de assinatura inválido"
+
+msgid "Ticket not found"
+msgstr "Chamado não encontrado"
+
+msgid "You do not have permission to modify this ticket"
+msgstr "Você não tem permissão para modificar este chamado"
+
+msgid "Failed to decode signature data"
+msgstr "Falha ao decodificar dados da assinatura"
+
+msgid "Failed to create temporary file"
+msgstr "Falha ao criar arquivo temporário"
+
+msgid "Failed to create document"
+msgstr "Falha ao criar documento"
+
+msgid "Failed to attach signature to ticket"
+msgstr "Falha ao anexar assinatura ao chamado"
+
+msgid "Internal server error"
+msgstr "Erro interno do servidor"
+
+# Success messages
+msgid "Signature saved successfully"
+msgstr "Assinatura salva com sucesso"
+
+# Document names
+msgid "Digital Signature - Ticket #%d"
+msgstr "Assinatura Digital - Chamado #%d"
+
+# Logging messages
+msgid "Digital signature plugin initialized"
+msgstr "Plugin de assinatura digital inicializado"
+
+msgid "Signature pad displayed for ticket"
+msgstr "Interface de assinatura exibida para o chamado"
+
+msgid "Signature validation successful"
+msgstr "Validação de assinatura bem-sucedida"
+
+msgid "User permission check passed"
+msgstr "Verificação de permissão do usuário aprovada"

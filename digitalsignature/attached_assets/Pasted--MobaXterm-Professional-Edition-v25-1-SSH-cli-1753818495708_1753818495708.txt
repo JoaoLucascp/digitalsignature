@@ -1,0 +1,79 @@
+              • MobaXterm Professional Edition v25.1 •               │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to new@10.10.31.172                                    │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-71-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of ter 29 jul 2025 19:39:08 UTC
+
+  System load:  0.96               Processes:              227
+  Usage of /:   23.1% of 27.39GB   Users logged in:        0
+  Memory usage: 18%                IPv4 address for ens33: 10.10.31.172
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Manutenção de Segurança Expandida para Applications não está ativa.
+
+0 as atualizações podem ser aplicadas imediatamente.
+
+Ativar ESM Apps para poder receber possiveis futuras atualizações de segurança.
+Consulte https://ubuntu.com/esm ou execute: sudo pro status
+
+
+Last login: Tue Jul 29 19:14:06 2025 from 10.10.31.172
+new@newdesk-server:~$ sudo -i
+[sudo] password for new:
+root@newdesk-server:~# ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -q -N ""
+root@newdesk-server:~# cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINmEfCBlAYvRWEiVXvlBadbOnmxZqyDKUl/e87e8cE4k root@newdesk-server
+root@newdesk-server:~# echo "<ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINmEfCBlAYvRWEiVXvlBadbOnmxZqyDKUl/e87e8cE4k root@newdesk-server>" >> ~/.ssh/authorized_keys
+root@newdesk-server:~# chmod 700 ~/.ssh
+root@newdesk-server:~# chmod 600 ~/.ssh/id_ed25519
+root@newdesk-server:~# chmod 644 ~/.ssh/id_ed25519.pub
+root@newdesk-server:~# chmod 600 ~/.ssh/authorized_keys
+root@newdesk-server:~# ssh -i ~/.ssh/id_ed25519 new@10.10.31.172
+new@10.10.31.172's password:
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-71-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of ter 29 jul 2025 19:47:33 UTC
+
+  System load:  0.16               Processes:              231
+  Usage of /:   23.1% of 27.39GB   Users logged in:        1
+  Memory usage: 19%                IPv4 address for ens33: 10.10.31.172
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Manutenção de Segurança Expandida para Applications não está ativa.
+
+0 as atualizações podem ser aplicadas imediatamente.
+
+Ativar ESM Apps para poder receber possiveis futuras atualizações de segurança.
+Consulte https://ubuntu.com/esm ou execute: sudo pro status
+
+
+Last login: Tue Jul 29 19:39:27 2025 from 10.10.31.115
+new@newdesk-server:~$

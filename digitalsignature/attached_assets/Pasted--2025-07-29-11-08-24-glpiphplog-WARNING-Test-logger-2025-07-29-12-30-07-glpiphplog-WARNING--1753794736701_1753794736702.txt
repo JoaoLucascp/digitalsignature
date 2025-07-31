@@ -1,0 +1,62 @@
+[2025-07-29 11:08:24] glpiphplog.WARNING: Test logger  
+[2025-07-29 12:30:07] glpiphplog.WARNING:   *** PHP User Warning (512): Unable to load plugin "SignatureCapture" information. in /var/www/html/glpi/src/Plugin.php at line 654
+  Backtrace :
+  src/Plugin.php:654                                 trigger_error()
+  src/Plugin.php:538                                 Plugin->checkPluginState()
+  front/marketplace.php:43                           Plugin->checkStates()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1114
+  Backtrace :
+  src/Html.php:1114                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 1118
+  Backtrace :
+  src/Html.php:1118                                  header()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2137
+  Backtrace :
+  src/Html.php:2137                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:30:10] glpiphplog.WARNING:   *** PHP Warning (2): Cannot modify header information - headers already sent by (output started at /var/www/html/glpi/src/Plugin.php:654) in /var/www/html/glpi/src/Html.php at line 2138
+  Backtrace :
+  src/Html.php:2138                                  header()
+  src/Html.php:1122                                  Html::header_nocache()
+  src/Html.php:1692                                  Html::includeHeader()
+  front/marketplace.php:45                           Html::header()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:36:51] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 12:37:02] glpiphplog.CRITICAL:   *** Uncaught Exception Laminas\I18n\Exception\InvalidArgumentException: /var/www/html/glpi/plugins/digitalsignature/locales/pt_BR.mo is not a valid gettext file in /var/www/html/glpi/vendor/laminas/laminas-i18n/src/Translator/Loader/Gettext.php at line 81
+  Backtrace :
+  .../laminas-i18n/src/Translator/Translator.php:738 Laminas\I18n\Translator\Loader\Gettext->load()
+  .../laminas-i18n/src/Translator/Translator.php:612 Laminas\I18n\Translator\Translator->loadMessagesFromFiles()
+  .../laminas-i18n/src/Translator/Translator.php:762 Laminas\I18n\Translator\Translator->loadMessages()
+  front/locale.php:84                                Laminas\I18n\Translator\Translator->getAllMessages()
+  public/index.php:82                                require()
+  
+[2025-07-29 12:38:11] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 13:02:32] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
+[2025-07-29 13:09:57] glpiphplog.CRITICAL:   *** Uncaught Exception Error: Call to undefined method Session::validateCSRFToken() in /var/www/html/glpi/plugins/digitalsignature/ajax/save_signature.php at line 22
+  Backtrace :
+  public/index.php:82                                require()
+  
